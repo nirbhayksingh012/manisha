@@ -12,7 +12,7 @@ class WiseText extends HTMLElement{
     const m=this.getAttribute('mode'),R=matchMedia('(prefers-reduced-motion:reduce)').matches;
     if(R)return;
     if(typeof gsap==='undefined')return;
-    if(m==='split')gsap.from(this.querySelectorAll('.ch'),{yPercent:110,rotate:6,duration:1.1,ease:'expo.out',stagger:.045,delay:.2});
+    if(m==='split')gsap.from(this.querySelectorAll('.ch'),{yPercent:110,rotate:6,duration:1.1,ease:'expo.out',stagger:.045,delay:.2,onComplete:()=>{const p=this.closest('.line');if(p)p.style.overflow='visible'}});
     if(m==='words')gsap.from(this.querySelectorAll('.w>span'),{yPercent:110,duration:1,ease:'expo.out',stagger:.06,scrollTrigger:{trigger:this,start:'top 88%'}});
     if(m==='type'){const t=this._t||'';this.textContent='';this.classList.add('caret');let i=0;const id=setInterval(()=>{this.textContent=t.slice(0,++i);if(i>=t.length){clearInterval(id);setTimeout(()=>this.classList.remove('caret'),1500)}},55)}
     if(m==='rotate'&&this._w&&this._w.length>1){let i=0;const w=this._w;setInterval(()=>{gsap.to(this,{yPercent:-40,opacity:0,duration:.35,onComplete:()=>{i=(i+1)%w.length;this.textContent=w[i];gsap.fromTo(this,{yPercent:40,opacity:0},{yPercent:0,opacity:1,duration:.45,ease:'power3.out'})}})},2200);this.style.display='inline-block'}
