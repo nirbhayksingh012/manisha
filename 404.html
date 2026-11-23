@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>404 – Page Not Found | Manisha Mishra</title>
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: #0b0b0c;
+    color: #f5f4ef;
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+  .err-box {
+    max-width: 540px;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(229,195,138,0.18);
+    background: radial-gradient(circle at 50% 0%, rgba(229,195,138,0.06), transparent 70%), #111114;
+    border-radius: 12px;
+  }
+  .err-num {
+    font-size: clamp(4rem, 12vw, 7rem);
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(135deg, #e5c38a 0%, #d4a359 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+  }
+  .err-title {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #f5f4ef;
+  }
+  .err-desc {
+    color: rgba(245,244,239,0.65);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .err-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    background: #e5c38a;
+    color: #0b0b0c;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .err-btn:hover {
+    background: #f0d5a8;
+    transform: translateY(-2px);
+  }
+</style>
+</head>
+<body>
+  <div class="err-box">
+    <div class="err-num">404</div>
+    <h1 class="err-title">Page not found</h1>
+    <p class="err-desc">The page you were looking for doesn't exist or has been relocated.</p>
+    <a href="/" class="err-btn">← Back to Portfolio</a>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Vercel & Deployment
+.vercel
+.netlify
+
+# Logs & Scratch
+*.log
+scratch/
+
